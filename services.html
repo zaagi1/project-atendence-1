@@ -30,25 +30,38 @@
                 <h3><b style="color: blue;">HTML Course</b></h3>
                 <p>Learn how to build website structure using HTML.</p>
                 <p><b>Price: $50</b></p>
-                <button class="buyBtn" data-price="50">Buy Now</button>
+                <button class="buyBtn" data-name="HTML Course" data-price="50">Buy Now</button>
             </div>
 
             <div class="card">
                 <h3><b style="color: blue;">CSS Course</b></h3>
                 <p>Learn how to style websites professionally.</p>
                 <p><b>Price: $40</b></p>
-                <button class="buyBtn" data-price="40">Buy Now</button>
+                <button class="buyBtn" data-name="CSS Course" data-price="40">Buy Now</button>
             </div>
 
             <div class="card">
                 <h3><b style="color: blue;">JavaScript Course</b></h3>
                 <p>Learn DOM, events, and dynamic web development.</p>
                 <p><b>Price: $60</b></p>
-                <button class="buyBtn" data-price="60">Buy Now</button>
+                <button class="buyBtn" data-name="JavaScript Course" data-price="60">Buy Now</button>
             </div>
 
         </div>
     </section>
+
+    <!-- Payment Form (hidden by default) -->
+    <div id="paymentForm" style="display:none; margin-top:20px; text-align:center;">
+        <h2>Payment Form</h2>
+        <p id="selectedCourse"></p>
+        <form id="formPayment">
+            <input type="text" id="fullName" placeholder="Full Name" required><br><br>
+            <input type="email" id="email" placeholder="Email" required><br><br>
+            <input type="number" id="cardNumber" placeholder="Card Number" required><br><br>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
 
 
     <script src="domEvensValidation.js"></script>

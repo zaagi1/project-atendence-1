@@ -80,13 +80,40 @@ if (contactForm) {
         }
     });
 }
+
 // Buy Now buttons
+
 let buyButtons = document.querySelectorAll(".buyBtn");
+let paymentForm = document.getElementById("paymentForm");
+let selectedCourseText = document.getElementById("selectedCourse");
+let formPayment = document.getElementById("formPayment");
 
 buyButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
+        let courseName = btn.getAttribute("data-name");
         let price = btn.getAttribute("data-price");
-        alert("You have purchased this course for $" + price + " ✅");
+
+        // Show payment form
+        paymentForm.style.display = "block";
+        selectedCourseText.innerText = `You are buying "${courseName}" for $${price}`;
     });
 });
+
+// Handle payment form submission
+formPayment.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent page reload
+
+    let name = document.getElementById("fullName").value;
+    let email = document.getElementById("email").value;
+    let card = document.getElementById("cardNumber").value;
+
+    if (name && email && card) {
+        alert(`Payment successful!\nThank you ${name} for purchasing the course.`);
+        formPayment.reset();
+        paymentForm.style.display = "none";
+    } else {
+        alert("Please fill all the fields!");
+    }
+});
+
 
