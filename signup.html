@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Attendance System</div>
+    <ul class="nav-links">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<section class="form-page">
+    <h1>Create Account</h1>
+    <form id="signupForm">
+        <input type="text" id="suName" placeholder="Full Name" required>
+        <input type="email" id="suEmail" placeholder="Email Address" required>
+        <input type="password" id="suPass" placeholder="Password" required>
+        <button type="submit">Signup</button>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+</section>
+
+<script src="domEvensValidation.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>
